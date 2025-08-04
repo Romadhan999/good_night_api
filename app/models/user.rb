@@ -4,4 +4,6 @@ class User < ApplicationRecord
   has_many :followings, through: :follows, source: :followed
   has_many :reverse_follows, class_name: "Follow", foreign_key: :followed_id, dependent: :destroy
   has_many :followers, through: :reverse_follows, source: :follower
+
+  validates :name, presence: true
 end
