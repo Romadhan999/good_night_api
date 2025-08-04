@@ -1,25 +1,17 @@
-# README
+# Good Night API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup Application:
 
-Things you may want to cover:
+* Use rails v8.0.2
 
-* Ruby version
+* bundle install
 
-* System dependencies
+* rails db:create
 
-* Configuration
+* rails db:migrate
 
-* Database creation
+* rails db:seed
 
-* Database initialization
+* rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# good_night_api
+Developed by: MRomadhan
