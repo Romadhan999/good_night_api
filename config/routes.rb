@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :sleep_records, only: [ :create, :update, :index ]
+  get "feed", to: "feeds#index"
 end
