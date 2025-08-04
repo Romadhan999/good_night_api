@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :sleep_records, only: [ :create, :update, :index ]
   get "feed", to: "feeds#index"
+  post "follow/:id", to: "follows#create"
+  delete "unfollow/:id", to: "follows#destroy"
 end

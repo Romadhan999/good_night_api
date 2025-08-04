@@ -8,11 +8,16 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+Follow.delete_all
+SleepRecord.delete_all
 User.destroy_all
 
 u1 = User.create!(name: "Andre")
 u2 = User.create!(name: "Sule")
 u3 = User.create!(name: "Cleopatra")
+
+u1.followings << u2
+u1.followings << u3
 
 SleepRecord.create!(user: u1, start_time: 9.hours.ago, end_time: 1.hour.ago)
 SleepRecord.create!(user: u2, start_time: 8.hours.ago, end_time: 1.hour.ago)

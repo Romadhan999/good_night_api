@@ -3,6 +3,7 @@ class FeedsController < ApplicationController
 
   def index
     sleep_records = SleepRecord
+                      .where(user: @user.followings)
                       .where("start_time >= ?", 1.week.ago)
                       .where.not(end_time: nil)
                       .order(duration: :desc)
